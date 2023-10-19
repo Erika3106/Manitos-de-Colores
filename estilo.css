@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@500&family=Inconsolata:wght@200&family=Playpen+Sans:wght@300&family=Roboto+Condensed:wght@700&display=swap');
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* crear animacion de seguimiento de forma natural */
+    scroll-behavior: smooth;
+}
+
+section {
+    /* por defecto cada section ocupará el tamaño del viuport */
+    min-width: 100vh;
+    box-sizing: border-box;
+}
+
+#menu {
+    background-color: rgba(195, 35, 88);
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+        "inicio inicio contacto contacto"
+        "inicio inicio ubicacion nosotros";
+
+}
+#menu .tile{
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#menu .tile a{
+    text-decoration: none;
+}
+
+#menu .tile .front{
+    color:white;
+    background-color: black;
+    height:  100%;
+    display: grid;
+    justify-items: center ;
+    align-items:center ;
+    padding: 20px;
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
+    background-size: auto;
+    background-position: center center;
+
+}
+
+#menu .tile .back{
+    background-color: black;
+    color: white;
+    display: grid;
+    justify-items: center ;
+    align-items:center ;
+    height: 100%;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#menu .tile:hover .front{
+    margin-top: -100%;
+
+}
+
+#menu .contacto-tile:hover .front{
+    margin-top: -50%;
+}
+
+#menu .inicio-tile .front{
+    background-image: url(imagenes/manitos.png);
+}
+
+#menu .contacto-tile .front{
+    background-image: url(imagenes/wts-icono.png);
+}
+
+
+#menu .ubicacion-tile .front{
+    background-image: url(imagenes/ubi.png);
+
+}
+
+#menu .nosotros-tile .front{
+    background-image: url(imagenes/nosotros.jpg);
+
+}
+
+.inicio-tile{
+    grid-area: inicio;
+}
+.contacto-tile{
+    grid-area: contacto;
+}
+.ubicacion-tile{
+    grid-area: ubicacion;
+}
