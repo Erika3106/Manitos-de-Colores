@@ -154,15 +154,15 @@ section {
 }
 
 /* listo y revisar posiciones */
-
-
+/****************************************************************************/
 #galeria {  
-    background-color: rgb(36, 236, 220);
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.1fr 0.9fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 0.5fr 1.5fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
       "main-area main-area main-area foto1 foto1 foto1 foto1 foto2 foto2"
       "main-area main-area main-area foto1 foto1 foto1 foto1 foto2 foto2"
       "main-area main-area main-area foto1 foto1 foto1 foto1 foto3 foto3"
@@ -171,35 +171,55 @@ section {
       "main-area main-area main-area foto6 foto6 foto5 foto5 foto3 foto3"
       "main-area main-area main-area foto6 foto6 foto5 foto5 foto7 foto7"
       "main-area main-area main-area foto6 foto6 foto8 foto8 foto8 foto9"
-      "main-area main-area main-area foto6 foto6 foto8 foto8 foto8 foto9"; 
+      "main-area main-area main-area foto6 foto6 foto8 foto8 foto8 foto9";
   }
-  .main-area { grid-area: main-area; }
+  
+  .main-area {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+    grid-area: main-area;
+  }
+  
   .foto1 { grid-area: foto1; }
+  
   .foto2 { grid-area: foto2; }
-  .foto3 {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+  
+  .foto3 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
       ". . ."
       ". . ."
-      ". . ."; 
-    grid-area: foto3; 
+      ". . .";
+    grid-area: foto3;
   }
+  
   .foto4 { grid-area: foto4; }
+  
   .foto5 { grid-area: foto5; }
+  
   .foto6 { grid-area: foto6; }
+  
   .foto7 { grid-area: foto7; }
+  
   .foto8 { grid-area: foto8; }
+  
   .foto9 { grid-area: foto9; }
-  
-  
+/***********************************************************************/
+
   #galeria .tile {
     background-color: rgb(36, 236, 220);
     border-radius: 5px;
-    background-size: cover;
-    background-position: center center;
+    /* background-size: cover;
+    background-position: center center; */
   }
 
   #galeria .tile a{
@@ -242,3 +262,67 @@ section {
 
 }
 
+/* Estilos generales */
+body {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #1b046e;
+}
+
+/* Estilos del formulario */
+form {
+    background-color:#f2f2f2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, checkbox {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: rgb(36, 236, 220);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el resultado */
+#resultado {
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Estilo para los elementos de entrada (inputs) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombreado */
+}
