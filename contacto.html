@@ -6,8 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="favicon/winnie.ico" type="image/x-icon">
+    <script src="js/js.js"></script>
+    <script
+        src="https://kit.fontawesome.com/324dfb2411.js"
+        crossorigin="anonymous"
+    ></script> 
     <title>Manitos de colores</title>
+    
 </head>
+
+<section id="menu">
+        <div class="tile inicio-tile">
+            <a href="index.html">
+                <!-- front coloco imagen e info -->
+                <div class="front"></div>
+                <div class="back">Inicio</div>
+            </a>
+        </div>
+        <div class="tile nosotros-tile">
+            <a href="#nosotros">
+                <div class="front"></div>
+                <div class="back">Nosotros</div>
+            </a>
+        </div>
+        <div class="tile ubicacion-tile">
+            <a href="#ubicacion">
+                <div class="front"></div>
+                <div class="back">Ubicación</div>
+            </a>
+        </div>
+        <div class="tile contacto-tile">
+            <a href="contacto.html">
+                <div class="front"></div>
+                <div class="back">Contacto</div>
+            </a>
+        </div>
+    </section>
 
 
 <body>
@@ -15,15 +49,122 @@
     <section id="contacto">
         <div class="tile tile-3">
             <div>
-                <h2>contacto</h2>
+                <h2>Contacto</h2>
                 <p>¡Llego el momento de conocernos!. En esta página podrás dejar consultas, sugerencias y cargar los datos de tu hijo/a para una pre inscripción. 
                     Queremos ser parte de una infancia feliz y enseñar valores a nuestros alumnitos.
                     ¡Ellos son el futuro!
                     
                 </p>
-                <img src="imagenes\Directora Antonia Montes.jpg" alt=" antonia"alt="directora" width="300">
+                <h3>Escríbenos: </h3>
+                <a href="https://wa.me/2615929001" target="_blank">Por WhatsApp</a>
+                <br>
+                <a href="mailto:manitosdecolores@gmail.com" target="_blank">Por correo</a>
+                <h3>Pre-inscripción: </h3>
+                <form
+        id="cto_frm"
+        name="contacto-form"
+        accept-charset="utf-8"
+        action="https://formspree.io/f/xpzekdao"
+        method="post">
+        
+        <fieldset id="cto-frm-inputs">
+          <legend> <h4>Datos del niño/a</h4></legend>
+             <label for="nombrecompleto">Nombre completo:</label>
+             <input type="text" name="nombre completo" name="nombrecompleto" id="nombrecompleto" placeholder=" Nombre y apellido" > </p>
+             <label for="edad">Edad:</label>
+             <input type="number" min="0" max="6" name="edad" name="edad" id="edad">
+             <label for="fn">Fecha Nacimiento:</label>
+             <input type="date" name="fn" id="fn">
+             <label for="telefono">Número teléfono:</label>
+             <input type="text" name="telefono" placeholder=" Número telefónico" id="telefono">
+             <label for="correo">Correo electrónico:</label>
+             <input type="email" name="correo" placeholder=" Correo@electronico.com" id="correo">
+                      
+          <legend> <h4>Horario a convenir</h4></legend>
+             <input type="radio" name="opcion" id="opcion" value="mañana"> De 8hs. a 12hs.
+             <input type="radio" name="opcion" id="opcion" value="mediodia"> De 11hs. a 14hs.
+             <input type="radio" name="opcion" id="opcion" value="siesta"> De 13hs. a 16hs.
+             <input type="radio" name="opcion" id="opcion" value="tarde"> De 16hs. a 19hs.
+      
+           <h4 >Cuentanos más sobre el niño/a:</h4>
+             <textarea rows="8" cols="40°" name="comentario" id="comentario"></textarea>
+             <input type="submit" value="Enviar">
+       </fieldset>
+       <br>
+     </form>
+
             </div>
         </div>
     </section>
 
+    <!-- seccion "projects" -->
+    <section id="galeria">
+        <div class="tile main-foto">
+            <h2>GALERIA</h2>
+            <div>
+              TE INVITAMOS A CONOCERNOS
+            </div>
+        </div>
+        <div class="tile foto2">
+            <a href="#"></a>
+        </div>
+        <div class="tile foto3">
+            <a href="#"></a>
+        </div>
+        <div class="tile foto4">
+            <a href="#"></a>
+        </div>
+        <div class="tile foto5">
+            <a href="#"></a>
+        </div>
+      
+    </section>    
+    <!-- </section>-->
+    
+   
+<footer>
+        <div class="footer-contenido">
+          <h3>Manitos de Colores</h3>
+          <p>Fray Luis Beltrán (Prov. Mendoza)</p>
+          <p>
+            © 2023 Manitos de Colores — Todos los Derechos Reservados. Desarrollado por
+            Team God Level.
+          </p>
+          <ul class="redes">
+            <li>
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com" target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/hj4ukxGRpuEtxhUVA" target="_blank"
+                ><i class="fa-solid fa-location-dot"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:manitosdecolores@gmail.com">
+                <i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://wa.me/2615929001" target="_blank"
+                ><i class="fa fa-whatsapp"></i
+              ></a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </footer>
+   
 </body>
+
