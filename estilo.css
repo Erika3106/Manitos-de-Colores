@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@500&family=Inconsolata:wght@200&family=Playpen+Sans:wght@300&family=Roboto+Condensed:wght@700&display=swap');
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0;
@@ -7,7 +5,7 @@ body {
 }
 
 html {
-    /* crear animacion de seguimiento de forma natural */
+    /* crear animacion de seguimiento en el hipervinculo de nav */
     scroll-behavior: smooth;
 }
 
@@ -18,88 +16,361 @@ section {
 }
 
 #menu {
-    background-color: rgba(195, 35, 88);
+    background-color: rgb(240, 181, 196);
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 150px);
     justify-content: center;
     align-content: center;
     grid-template-areas:
-        "inicio inicio contacto contacto"
-        "inicio inicio ubicacion nosotros";
-
+        "inicio inicio nosotros nosotros"
+        "inicio inicio ubicacion contacto";
 }
-#menu .tile{
+
+#menu .tile {
     height: 100%;
     overflow: hidden;
     cursor: pointer;
 }
 
-#menu .tile a{
+#menu .tile a {
     text-decoration: none;
 }
 
-#menu .tile .front{
-    color:white;
-    background-color: black;
-    height:  100%;
+/* capa del frente */
+#menu .tile .front {
+    color: white;
+    background-color: rgb(196, 147, 147);
+    height: 100%;
     display: grid;
-    justify-items: center ;
-    align-items:center ;
+    justify-items: center;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
-
-    transition: all 0.3s ease;
-    background-size: auto;
+    /* tamaño y posicion de las imagenes */
+    background-size: cover;
     background-position: center center;
-
+    /* movimiento y alineacion de imagenes */
+    transition: all 0.3s ease;
 }
 
-#menu .tile .back{
-    background-color: black;
+/* capa del trasera */
+#menu .tile .back {
+    background-color: rgb(223, 97, 195);
     color: white;
     display: grid;
-    justify-items: center ;
-    align-items:center ;
+    justify-items: center;
+    align-items: center;
     height: 100%;
     font-weight: bold;
     font-size: 28px;
 }
 
-#menu .tile:hover .front{
+/* hover para mover la capa front */
+#menu .tile:hover .front {
     margin-top: -100%;
-
 }
 
-#menu .contacto-tile:hover .front{
+
+#menu .nosotros-tile:hover .front {
     margin-top: -50%;
 }
 
-#menu .inicio-tile .front{
-    background-image: url(imagenes/manitos.png);
+
+
+#menu .inicio-tile .front {
+    background-image: url(imagenes/mainfoto.jpg);
 }
 
-#menu .contacto-tile .front{
-    background-image: url(imagenes/wts-icono.png);
+#menu .nosotros-tile .front {
+    background-image: url(imagenes/menu-nosotros.jpg);
 }
 
-
-#menu .ubicacion-tile .front{
-    background-image: url(imagenes/ubi.png);
-
+#menu .ubicacion-tile .front {
+    background-image: url(imagenes/menu-ubi.webp)
 }
 
-#menu .nosotros-tile .front{
-    background-image: url(imagenes/nosotros.jpg);
-
+#menu .contacto-tile .front {
+    background-image: url(imagenes/menu-wtsapp.jpg);
 }
 
-.inicio-tile{
+.inicio-tile {
     grid-area: inicio;
 }
-.contacto-tile{
-    grid-area: contacto;
+
+.nosotros-tile {
+    grid-area: nosotros;
 }
-.ubicacion-tile{
-    grid-area: ubicacion;
+
+#seccion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
 }
+
+
+#seccion .tile {
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    background-color: #eee;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+#seccion .tile img {
+    width: 70%;
+
+
+}
+
+#seccion .tile-1 {
+    grid-column: 1 / 2;
+}
+
+#seccion .tile-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+#seccion .tile-2 img {
+    /* width: 400px; */
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#post {
+    padding: 10px;
+    background-color: rgb(240, 181, 196);
+    display: grid;
+    grid-template: repeat(2, 300px)/ repeat(3, 350px);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+#post .post {
+    display: grid;
+    align-content: end;
+    border-radius: 5px;
+    background-color: white;
+
+    background-size: cover;
+    background-position: center center;
+
+    overflow: hidden;
+}
+
+#post .post a {
+    color: white;
+    text-decoration: none;
+}
+
+#post .post .title {
+    background-color: rgba(201, 235, 233, 0.397);
+    color: #4d2828;
+    padding: 10px;
+}
+
+#post .post .title:hover {
+    background-color: #4d2828;
+    color: rgba(201, 235, 233, 0.397);
+}
+
+#post .post.post-1 {
+    background-image: url(imagenes/post2.jpg);
+}
+
+#post .post.post-2 {
+    background-image: url(imagenes/post1.jpg);
+}
+
+#post .post.post-3 {
+    background-image: url(imagenes/post3.jpg);
+}
+
+#post .post.post-4 {
+    background-image: url(imagenes/post4.jpg);
+}
+#post .post.post-5 {
+    background-image: url(imagenes/post5.jpg);
+}
+#post .post.post-6 {
+    background-image: url(imagenes/post6.jpg);
+}
+
+
+#contacto {
+    background-color: rgb(194, 117, 177);
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contacto form {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#contacto form input,
+#contacto form textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%
+}
+
+#contacto form input[type="submit"] {
+    background-color: violet;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Media queris de 3 cortes*/
+
+@media screen and (max-width: 1090px) {
+    #post {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "inicio nosotros"
+            "ubicacion contacto";
+    }
+
+    #menu .tile:hover .front {
+        margin-top: -50vh;
+    }
+
+    #seccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+
+    #seccion .tile img {
+        width: 70%;
+    }
+
+    #seccion .tile-2 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #seccion .tile-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #seccion .tile-3 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #seccion .tile-4 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    #seccion .tile-5 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+    }
+
+    #contacto {
+        padding: 0 20px;
+        grid-template: auto 100px/ 100%;
+
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "inicio"
+            "nosotros"
+            "ubicacion"
+            "contacto";
+    }
+
+    #menu .tile:hover .front {
+        margin-top: -25vh;
+    }
+
+    #seccion {
+        display: grid;
+        grid-template: auto / auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #seccion .tile-2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #seccion .tile-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #seccion .tile-3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    #seccion .tile-4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    #seccion .tile-5 {
+        grid-column: 1 / 2;
+        grid-row:  5 / 6;
+    }
+  
+
+    #post {
+        grid-template: repeat(6, 1 fr) / repeat(1, 1fr);
+    }
+
+    #post .title {
+        display: grid;
+    }
+}
+
