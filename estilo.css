@@ -194,6 +194,7 @@ section {
 }
 #posts .post.post-6 {
     background-image: url(imagenes/post6.jpg)
+
 }
 
 /* ----------------------- */
@@ -205,6 +206,38 @@ section {
     align-content: center;
     box-sizing: border-box;
 }
+
+#contacto form {
+    padding: 20px;
+    color: rgb(10, 10, 10);
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+
+}
+
+/* ----------------------- */
+#contacto {
+    background-color: #f19a9a;
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+
+    box-sizing: border-box;
+}
+#contacto form input {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+/************************************/
+
 
 #contacto form {
     padding: 20px;
@@ -235,6 +268,12 @@ body {
     margin: 10px;
     padding: 10px;
 }
+
+
+
+/* h1 {
+    color: #1b046e;
+} */
 
 
 /* Estilos del formulario */
@@ -449,3 +488,6 @@ input {
             text-align: right;
         }
   
+
+}
+
