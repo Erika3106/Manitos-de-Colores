@@ -5,45 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="shortcut icon" href="favicon/manito-favicon.ico" type="manito-favicon.ico">
+    <link rel="shortcut icon" href="favicon/winnie.ico" type="image/x-icon">
     <title>Manitos de colores</title>
 </head>
 
 
 <body>
-    <section id="menu">
-        <div class="tile inicio-tile">
-            <a href="index.html">
-                <!-- front coloco imagen e info -->
-                <div class="front"></div>
-                <div class="back">Inicio</div>
-            </a>
-        </div>
-        <div class="tile nosotros-tile">
-            <a href="nosotros.html">
-                <div class="front"></div>
-                <div class="back">Nosotros</div>
-                <a href="nosotros.html">NOSOTROS</a>
-            </a>
-        </div>
-        <div class="tile ubicacion-tile">
-            <a href="ubicacion.html">
-                <div class="front"></div>
-                <div class="back">Ubicación</div>
-            </a>
-        </div>
-        <div class="tile contacto-tile">
-            <a href="contacto.html">
-                <div class="front"></div>
-                <div class="back">Contacto</div>
-            </a>
-        </div>
-    </section>
     
     <section id="contacto">
         <div class="tile tile-3">
             <div>
-                <h2>CONTACTO</h2>
+                <h2>contacto</h2>
                 <p>¡Llego el momento de conocernos!. En esta página podrás dejar consultas, sugerencias y cargar los datos de tu hijo/a para una pre inscripción. 
                     Queremos ser parte de una infancia feliz y enseñar valores a nuestros alumnitos.
                     ¡Ellos son el futuro!
@@ -53,49 +25,5 @@
             </div>
         </div>
     </section>
-<section>
-    <h1>Calculá el valor aproximado de la cuota mensual</h1>
-    <form id="jardinForm">
-        <label for="edad">Edad del niño (0-5 años):</label>
-        <input type="number" id="edad" min="0" max="5" required><br>
 
-        <label for="horas">Cantidad de horas por día:</label>
-        <input type="number" id="horas" min="1" required><br>
-
-        <label for="almuerzo">Incluir almuerzo:</label>
-        <input type="checkbox" id="almuerzo"><br>
-
-        <button type="button" onclick="calcularCuota()">Calcular Cuota</button>
-    </form>
-
-    <div id="resultado"></div>
-
-    <script>
-        function calcularCuota() {
-            const edad = parseInt(document.getElementById('edad').value);
-            const horas = parseInt(document.getElementById('horas').value);
-            const incluyeAlmuerzo = document.getElementById('almuerzo').checked;
-            let cuotaBase = 10000; // Cuota base (valor de ejemplo)
-
-            // Calcular cuota adicional basada en la edad
-            if (edad >= 0 && edad <= 2) {
-                cuotaBase += 5000; // Ejemplo: Aumento para edades de 0 a 2 años
-            } else if (edad >= 3 && edad <= 5) {
-                cuotaBase += 3000; // Ejemplo: Aumento  para edades de 3 a 5 años
-            }
-
-            // Calcular cuota adicional basada en las horas
-            cuotaBase += horas * 1000; // Ejemplo: Aumento por hora
-
-            // Calcular cuota adicional por almuerzo
-            if (incluyeAlmuerzo) {
-                cuotaBase += 1000; // Ejemplo: Costo adicional por almuerzo
-            }
-
-            // Mostrar el resultado en la página
-            const resultadoDiv = document.getElementById('resultado');
-            resultadoDiv.innerHTML = `Cuota estimada: $${cuotaBase}`;
-        }
-    </script>
-</section>
 </body>
