@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px;
-    margin: 10px;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -194,7 +194,6 @@ section {
 }
 #posts .post.post-6 {
     background-image: url(imagenes/post6.jpg)
-
 }
 
 /* ----------------------- */
@@ -206,38 +205,6 @@ section {
     align-content: center;
     box-sizing: border-box;
 }
-
-#contacto form {
-    padding: 20px;
-    color: rgb(10, 10, 10);
-    display: grid;
-    gap: 15px;
-    grid-template: auto / auto;
-    align-items: center;
-
-}
-
-/* ----------------------- */
-#contacto {
-    background-color: #f19a9a;
-    display: grid;
-    grid-template: auto 100px / 700px;
-    justify-content: center;
-    align-content: center;
-
-    box-sizing: border-box;
-}
-#contacto form input {
-    padding: 20px 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-}
-
-/************************************/
-
 
 #contacto form {
     padding: 20px;
@@ -265,16 +232,13 @@ body {
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     background-color: #f2f2f2;
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 /* h1 {
     color: #1b046e;
 } */
-
 
 /* Estilos del formulario */
 form {
@@ -445,49 +409,3 @@ input {
         display: grid;
     }
 }
-
-/********************************************/
-
-        /* Estilo para el font-family del elemento <p> */
-        p{  
-            font-family: font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            text-align: center;
-            margin-top: 50px;
-            color: rgb(10, 10, 10) ;
-            font-weight: bold;
-        }
-        
-        /* Estilo para el background-color del cuerpo (body) */
-        body {
-            background-color: #c9e9b7; 
-        }
-        
-/* Estilo para el contenedor del iframe para centrarlo */
-        .iframe-container {
-            text-align: center;
-            
-        }
-
-        /* Estilo para el iframe */
-        iframe {
-            display: inline-block;
-            margin-bottom: 40px;
-        }
-      
-
-        .img {
-            margin-left: 30px; /* Espacio entre el logotipo y el encabezado */
-            width: 40px; /* Ajusta el ancho del logotipo según tus necesidades */
-            height: auto; /* Mantiene la proporción del logotipo */
-        }
-
-        a{
-            font-family: Arial, sans-serif; 
-            font-size: 30px;
-            text-align: right;
-        }
-  
-
-}
-
