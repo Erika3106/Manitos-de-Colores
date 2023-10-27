@@ -356,13 +356,91 @@ input {
     }
 
 }
-  
+
+@media screen and (max-width: 500px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "inicio"
+            "nosotros"
+            "ubicacion"
+            "contacto";
+    }
+
+    #menu .tile:hover .front {
+        margin-top: -25vh;
+    }
+    
+    #seccion {
+        display: grid;
+        grid-template: auto / auto;
+        /* gap: 20px;
+        padding: 20px; */
+    }
+
+    #seccion .tile-2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #seccion .tile-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #seccion .tile-3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    #seccion .tile-4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    #seccion .tile-5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    #posts {
+        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+    }
+
+    #posts .title {
+        display: grid;
+    }
+}
+/* Estilo del iframe */
+.iframe-container {
+    margin: 20px;
+    width: 50%; /* Establece el ancho en 50% */
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: inline-block; /* Permite que el ancho se ajuste al contenido */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    border: none;
+    width: 100%;
+}
+
+
+/* Estilo del contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
 footer {
     
     height: auto;
     width: 100%;
-    padding-top: 20px; 
-    background-color:  rgb(153, 95, 141);
+    padding-top: 20px;
+        /*background-color:  rgb(153, 95, 141);*/
     color: coral;
     text-align: center
     
@@ -417,56 +495,42 @@ footer {
     color: rgb(85, 28, 7);
     transform: rotate(360deg);
   }
-
-@media screen and (max-width: 500px) {
-    #menu {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 
-            "inicio"
-            "nosotros"
-            "ubicacion"
-            "contacto";
-    }
-
-    #menu .tile:hover .front {
-        margin-top: -25vh;
-    }
-    
-    #seccion {
-        display: grid;
-        grid-template: auto / auto;
-        gap: 20px;
-        padding: 20px; 
-    }
-
-    #seccion .tile-2 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
-    #seccion .tile-1 {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-    #seccion .tile-3 {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
-    #seccion .tile-4 {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-    }
-    #seccion .tile-5 {
-        grid-column: 1 / 2;
-        grid-row: 5 / 6;
-    }
-
-    #posts {
-        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
-    }
-
-    #posts .title {
-        display: grid;
-    }
+/* Estilo para la sección con ID "maestras" */
+#maestras {
+    background-color: #F5F5DC; /* Color de fondo beige pastel */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
+
+.maestra {
+    text-align: center;
+    background-color: #FFDAB9; /* Color de fondo melocotón pastel */
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 30%; /* Ancho de cada sección de maestra */
+    margin: 10px;
+}
+
+.maestra img {
+    max-width: 100%;
+   
+}
+
+.maestra h2 {
+    font-size: 24px;
+    color: #000; /* Color del texto en negro */
+    margin: 10px 0;
+}
+
+.maestra p {
+    font-size: 16px;
+    color: #333; /* Color del texto un poco más oscuro que el fondo */
+
+    img[src="maestra2.jpg"] {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+ 
+        
