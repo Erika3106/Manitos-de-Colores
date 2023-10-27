@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="favicon/manito-favicon.ico" type="manito-favicon.ico">
+    <script src="js/js.js"></script>
+    <script
+        src="https://kit.fontawesome.com/324dfb2411.js"
+        crossorigin="anonymous"
+    ></script> 
+    
     <title>Manitos de colores</title>
+    
 </head>
-
 
 <body>
     <section id="menu">
@@ -49,53 +55,88 @@
                     ¡Ellos son el futuro!
                     
                 </p>
-                <img src="imagenes\Directora Antonia Montes.jpg" alt=" antonia"alt="directora" width="300">
+                <h3>Escríbenos: </h3>
+                <a href="https://wa.me/2615929001" target="_blank">Por WhatsApp</a>
+                <br>
+                <a href="mailto:manitosdecolores@gmail.com" target="_blank">Por correo</a>
+                <h3>Pre-inscripción: </h3>
+                <form
+        id="cto_frm"
+        name="contacto-form"
+        accept-charset="utf-8"
+        action="https://formspree.io/f/xpzekdao"
+        method="post">
+        
+        <fieldset id="cto-frm-inputs">
+          <legend> <h4>Datos del niño/a</h4></legend>
+             <label for="nombrecompleto">Nombre completo:</label>
+             <input type="text" name="nombre completo" name="nombrecompleto" id="nombrecompleto" placeholder=" Nombre y apellido" > </p>
+             <label for="edad">Edad:</label>
+             <input type="number" min="0" max="6" name="edad" name="edad" id="edad">
+             <label for="fn">Fecha Nacimiento:</label>
+             <input type="date" name="fn" id="fn">
+             <label for="telefono">Número teléfono:</label>
+             <input type="text" name="telefono" placeholder=" Número telefónico" id="telefono">
+             <label for="correo">Correo electrónico:</label>
+             <input type="email" name="correo" placeholder=" Correo@electronico.com" id="correo">
+                      
+          <legend> <h4>Horario a convenir</h4></legend>
+             <input type="radio" name="opcion" id="opcion" value="mañana"> De 8hs. a 12hs.
+             <input type="radio" name="opcion" id="opcion" value="mediodia"> De 11hs. a 14hs.
+             <input type="radio" name="opcion" id="opcion" value="siesta"> De 13hs. a 16hs.
+             <input type="radio" name="opcion" id="opcion" value="tarde"> De 16hs. a 19hs.
+      
+           <h4 >Cuentanos más sobre el niño/a:</h4>
+             <textarea rows="8" cols="40°" name="comentario" id="comentario"></textarea>
+             <input type="submit" value="Enviar">
+       </fieldset>
+       <br>
+     </form>
+
             </div>
         </div>
     </section>
-<section>
-    <h1>Calculá el valor aproximado de la cuota mensual</h1>
-    <form id="jardinForm">
-        <label for="edad">Edad del niño (0-5 años):</label>
-        <input type="number" id="edad" min="0" max="5" required><br>
-
-        <label for="horas">Cantidad de horas por día:</label>
-        <input type="number" id="horas" min="1" required><br>
-
-        <label for="almuerzo">Incluir almuerzo:</label>
-        <input type="checkbox" id="almuerzo"><br>
-
-        <button type="button" onclick="calcularCuota()">Calcular Cuota</button>
-    </form>
-
-    <div id="resultado"></div>
-
-    <script>
-        function calcularCuota() {
-            const edad = parseInt(document.getElementById('edad').value);
-            const horas = parseInt(document.getElementById('horas').value);
-            const incluyeAlmuerzo = document.getElementById('almuerzo').checked;
-            let cuotaBase = 10000; // Cuota base (valor de ejemplo)
-
-            // Calcular cuota adicional basada en la edad
-            if (edad >= 0 && edad <= 2) {
-                cuotaBase += 5000; // Ejemplo: Aumento para edades de 0 a 2 años
-            } else if (edad >= 3 && edad <= 5) {
-                cuotaBase += 3000; // Ejemplo: Aumento  para edades de 3 a 5 años
-            }
-
-            // Calcular cuota adicional basada en las horas
-            cuotaBase += horas * 1000; // Ejemplo: Aumento por hora
-
-            // Calcular cuota adicional por almuerzo
-            if (incluyeAlmuerzo) {
-                cuotaBase += 1000; // Ejemplo: Costo adicional por almuerzo
-            }
-
-            // Mostrar el resultado en la página
-            const resultadoDiv = document.getElementById('resultado');
-            resultadoDiv.innerHTML = `Cuota estimada: $${cuotaBase}`;
-        }
-    </script>
-</section>
+    <footer>
+        <div class="footer-contenido">
+          <h3>Manitos de Colores</h3>
+          <p>Fray Luis Beltrán (Prov. Mendoza)</p>
+          <p>
+            © 2023 Manitos de Colores — Todos los Derechos Reservados. Desarrollado por
+            Team God Level.
+          </p>
+          <ul class="redes">
+            <li>
+              <a href="https://www.facebook.com" target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com" target="_blank"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/hj4ukxGRpuEtxhUVA" target="_blank"
+                ><i class="fa-solid fa-location-dot"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:manitosdecolores@gmail.com">
+                <i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://wa.me/2615929001" target="_blank"
+                ><i class="fa fa-whatsapp"></i
+              ></a>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </footer>
 </body>
