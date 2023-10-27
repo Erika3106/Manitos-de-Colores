@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
 }
 
 html {
@@ -232,13 +232,10 @@ body {
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 
-/* h1 {
-    color: #1b046e;
-} */
 
 /* Estilos del formulario */
 form {
@@ -409,3 +406,46 @@ input {
         display: grid;
     }
 }
+
+/********************************************/
+
+        /* Estilo para el font-family del elemento <p> */
+        p{  
+            font-family: font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+            color: rgb(10, 10, 10) ;
+            font-weight: bold;
+        }
+        
+        /* Estilo para el background-color del cuerpo (body) */
+        body {
+            background-color: #c9e9b7; 
+        }
+        
+/* Estilo para el contenedor del iframe para centrarlo */
+        .iframe-container {
+            text-align: center;
+            
+        }
+
+        /* Estilo para el iframe */
+        iframe {
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+      
+
+        .img {
+            margin-left: 30px; /* Espacio entre el logotipo y el encabezado */
+            width: 40px; /* Ajusta el ancho del logotipo según tus necesidades */
+            height: auto; /* Mantiene la proporción del logotipo */
+        }
+
+        a{
+            font-family: Arial, sans-serif; 
+            font-size: 30px;
+            text-align: right;
+        }
+  
