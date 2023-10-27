@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@500&family=Inconsolata:wght@200&family=Playpen+Sans:wght@300&family=Roboto+Condensed:wght@700&display=swap');
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0;
@@ -7,99 +5,441 @@ body {
 }
 
 html {
-    /* crear animacion de seguimiento de forma natural */
     scroll-behavior: smooth;
 }
 
 section {
-    /* por defecto cada section ocupará el tamaño del viuport */
     min-width: 100vh;
     box-sizing: border-box;
 }
 
 #menu {
-    background-color: rgba(195, 35, 88);
+    background-color: pink;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 150px);
     justify-content: center;
     align-content: center;
     grid-template-areas:
-        "inicio inicio contacto contacto"
-        "inicio inicio ubicacion nosotros";
-
+        "inicio inicio nosotros nosotros"
+        "inicio inicio ubicacion contacto";
 }
-#menu .tile{
+
+#menu .tile {
     height: 100%;
     overflow: hidden;
     cursor: pointer;
 }
 
-#menu .tile a{
+#menu .tile a {
     text-decoration: none;
 }
 
-#menu .tile .front{
-    color:white;
-    background-color: black;
-    height:  100%;
+#menu .tile .front {
+    color: white;
+    background-color: rgb(228, 117, 136);
+    height: 100%;
     display: grid;
-    justify-items: center ;
-    align-items:center ;
+    justify-items: center;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
 
-    transition: all 0.3s ease;
-    background-size: auto;
+    background-size: cover;
     background-position: center center;
-
+    
+    transition: all 0.3s ease;
 }
 
-#menu .tile .back{
-    background-color: black;
+
+#menu .tile .back {
+    background-color: pink;
     color: white;
     display: grid;
-    justify-items: center ;
-    align-items:center ;
+    justify-items: center;
+    align-items: center;
     height: 100%;
     font-weight: bold;
     font-size: 28px;
 }
 
-#menu .tile:hover .front{
+#menu .tile:hover .front {
     margin-top: -100%;
-
 }
 
-#menu .contacto-tile:hover .front{
+#menu .nosotros-tile:hover .front {
     margin-top: -50%;
 }
 
-#menu .inicio-tile .front{
-    background-image: url(imagenes/manitos.png);
+#menu .inicio-tile .front {
+    background-image: url(imagenes/mainfoto.jpg);
 }
 
-#menu .contacto-tile .front{
-    background-image: url(imagenes/wts-icono.png);
-}
-
-
-#menu .ubicacion-tile .front{
-    background-image: url(imagenes/ubi.png);
-
-}
-
-#menu .nosotros-tile .front{
+#menu .nosotros-tile .front {
     background-image: url(imagenes/nosotros.jpg);
-
 }
 
-.inicio-tile{
+#menu .ubicacion-tile .front {
+    background-image: url(imagenes/screen-0-como\ llegar.webp)}
+
+#menu .contacto-tile .front {
+    background-image: url(imagenes/menu-wtsapp.jpg);
+}
+
+.inicio-tile {
     grid-area: inicio;
 }
-.contacto-tile{
-    grid-area: contacto;
+
+.nosotros-tile {
+    grid-area: nosotros;
 }
-.ubicacion-tile{
-    grid-area: ubicacion;
+
+
+/* -----------------------------------*/
+
+#seccion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
+
+#seccion .tile {
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    background-color: #eee;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+#seccion .tile img {
+    width: 70%;
+}  
+
+#seccion .tile-1 {
+    grid-column: 1 / 2;
+}
+
+#seccion .tile-2 {
+   grid-column: 2 / 3;
+   grid-row: 1 / 3;
+}
+
+#seccion .tile-2 img {
+    
+    /* height: 400px; */
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* -------------------- */
+#posts {
+    padding: 10px;
+    background-color: rgb(230, 170, 180);
+    display: grid;
+    grid-template: repeat(2, 300px) / repeat(3, 350px);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+#posts .post{
+    display: grid;
+    align-content: end;
+    border-radius: 5px;
+    background-color: white;
+
+    background-size: cover;
+    background-position: center center;
+
+    overflow: hidden;
+}
+
+#posts .post a {
+    color: #ccc;
+    text-decoration: none;
+}
+#posts .post .tile {
+    background-color: rgb(213, 90, 110);
+    color: white;
+    padding: 10px;
+}
+
+#posts .post .title:hover{
+    background-color: white;
+    color: rgb(213, 90, 110);
+}
+
+#posts .post.post-1 {
+    background-image: url(imagenes/post1.jpg);
+}
+#posts .post.post-2 {
+    background-image: url(imagenes/post2.jpg);
+}
+#posts .post.post-3 {
+    background-image: url(imagenes/post3.jpg);
+}
+#posts .post.post-4 {
+    background-image: url(imagenes/post4.jpg);
+}
+#posts .post.post-5 {
+    background-image: url(imagenes/post5.jpg);
+}
+#posts .post.post-6 {
+    background-image: url(imagenes/post6.jpg)
+}
+
+/* ----------------------- */
+#contacto {
+    background-color: #f19a9a;
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contacto form {
+    padding: 20px;
+    color: rgb(10, 10, 10);
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+#contacto form input {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+/************************************/
+
+
+/* Estilos generales */
+body {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* h1 {
+    color: #1b046e;
+} */
+
+/* Estilos del formulario */
+form {
+    background-color:#f2f2f2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, checkbox {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: rgb(36, 236, 220);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el resultado */
+#resultado {
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Estilo para los elementos de entrada (inputs) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombreado */
+}
+
+
+@media screen and (max-width: 1090px) {
+    #posts {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "inicio nosotros"
+            "ubicacion contacto";
+    }
+    
+    #menu .tile:hover .front {
+        margin-top: -50vh;
+    }
+
+
+    #seccion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #seccion .tile img {
+        width: 70%;
+    }  
+
+    #seccion .tile-2 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    #seccion .tile-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #seccion .tile-3 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    #seccion .tile-4 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    #seccion .tile-5 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    #contacto {
+        padding: 0 20px;
+        grid-template: auto 100px / 100px;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "inicio"
+            "nosotros"
+            "ubicacion"
+            "contacto";
+    }
+
+    #menu .tile:hover .front {
+        margin-top: -25vh;
+    }
+    
+    #seccion {
+        display: grid;
+        grid-template: auto / auto;
+        /* gap: 20px;
+        padding: 20px; */
+    }
+
+    #seccion .tile-2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #seccion .tile-1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #seccion .tile-3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    #seccion .tile-4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    #seccion .tile-5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    #posts {
+        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+    }
+
+    #posts .title {
+        display: grid;
+    }
+}
+/************************************/
+
+        /* Estilo para el font-family del elemento <p> */
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 50px;
+            color: rgb(51, 49, 53);
+            font-weight: bold;
+        }
+
+        /* Estilo para el background-color del cuerpo (body) */
+        body {
+            background-color: #c9e9b7; /* Cambia "#f2f2f2" por el color que desees en formato hexadecimal, RGB o nombre del color. */
+        }
+        
+/* Estilo para el contenedor del iframe para centrarlo */
+.iframe-container {
+            text-align: center;
+            
+        }
+
+        /* Estilo para el iframe */
+        iframe {
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        a{
+            font-family: Arial, sans-serif; 
+            font-size: 20px;
+            text-align: right;
+        }
+   
