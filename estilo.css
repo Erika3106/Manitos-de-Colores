@@ -565,11 +565,25 @@ footer {
 .maestra p {
     font-size: 16px;
     color: #333; /* Color del texto un poco más oscuro que el fondo */
-
+}
     img[src="maestra2.jpg"] {
         max-width: 100%;
         width: 100%;
         height: auto;
     }
- 
-        
+/* Estilos del botón */
+.btn-acceso {
+    background-color: pink;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* Añade un margen */
+    display: block;
+    margin: 0 auto; /* Centra el botón */
+}
+
+.btn-acceso:hover {
+    background-color: rgb(228, 117, 136); /* Cambia el color de fondo en el hover */
+}
