@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Administración</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="estilo_alumno.css">
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <main>
+        <div id="app" class="container">
+            <h1>Listado de alumnos activos</h1>
+            <br>
+            <a class="btn btn-primary" href="alumno_nuevo.html">Nuevo</a>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">DNI</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Fecha Nac</th>
+                                    <th scope="col">Calle</th>
+                                    <th scope="col">Nro</th>
+                                    <th scope="col">Localidad</th>
+                                    <th scope="col">TEL</th>
+                                    <th scope="col">Horas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" v-for="alumno in alumnos">
+                                    <td scope="row">{{alumno.id}}</td>
+                                    <td>{{alumno.dni}}</td>
+                                    <td>{{alumno.nombre}}</td>
+                                    <td>{{alumno.apellido}}</td>
+                                    <td>{{alumno.fecha_nac}}</td>
+                                    <td>{{alumno.domicilio}}</td>
+                                    <td>{{alumno.numero}}</td>
+                                    <td>{{alumno.localidad}}</td>
+                                    <td>{{alumno.telefono}}</td>
+                                    <td>{{alumno.horas}}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="alumno_update.html">Editar</a><br><br>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(alumno.id)">Eliminar</button>
+                                        <script src="../js/alumo.js"></script>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
