@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Administración</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="estilo_alumno_nuevo.css">
+</head>
+<body>
+  <header id="header">
+  </header>
+  <main>
+    <div class="container" id="app">
+        <h1>Alta de Alumno</h1>
+        <div class="mb-3">
+          <label for="DNI">DNI</label>
+          <input type="number" name="dni" id="dni"  v-model="dni">
+        </div>
+        <div class="mb-3">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" v-model="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" v-model="apellido">
+        </div>
+        <div class="mb-3">
+          <label for="fecha_nac">Fecha de nacimiento</label>
+          <input type="date" name="fecha_nac" id="fecha_nac" v-model="fecha_nac">
+        </div>
+        <div class="mb-3">
+          <label for="domicilio">Calle</label>
+          <input type="text" name="domicilio" id="domicilio" v-model="domicilio">
+        </div>
+        <div class="mb-3">
+          <label for="numero">Nro</label>
+          <input type="number" name="numero" id="numero" v-model="numero">
+        </div>
+        <div class="mb-3">
+          <label for="localidad">Localidad</label>
+          <input type="text" name="localidad" id="localidad" v-model="localidad">
+        </div>
+        <div class="mb-3">
+          <label for="telefono">Telefono</label>
+          <input type="text" name="telefono" id="telefono" v-model="telefono">
+        </div>
+        <div class="mb-3">
+          <label for="horas">Cantidad de horas</label>
+          <input type="number" name="horas" id="horas" v-model="horas">
+        </div>
+        <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script src="../js/alumno.js"></script>
+</body>
+</html>
