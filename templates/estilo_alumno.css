@@ -46,6 +46,10 @@ th, td {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+th:nth-child(6), td:nth-child(6) {
+    max-width: 150px; /* Ajusta el ancho máximo según tus necesidades */
+    white-space: normal; /* Permite que el contenido se desborde si es necesario */
+}
 .contenedor-centrado {
     display: flex;
     width: 100%;
@@ -101,4 +105,24 @@ a:hover {
 
 .btn-danger:hover {
     background-color: rgb(228, 117, 136);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.table-container {
+    width: 80%;
+    overflow-x: auto;
+}
+
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%; 
+    background-color: white;
+    border: 1px solid rgb(228, 117, 136);
+    margin-top: 10px; 
 }

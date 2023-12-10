@@ -13,53 +13,64 @@
     </header>
     <main>
         <div class="container" id="app">
-            <h2>Editar Alumno</h2>
-            <div class="mb-3">
-                <label for="id">Id</label>
-                <input type="number" name="id" id="id" disabled v-model="id">
-            </div>
-            <div class="mb-3">
-                <label for="dni">DNI</label>
-                <input type="number" name="dni" id="dni" v-model="dni">
-            </div>
-            <div class="mb-3">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" v-model="nombre">
-            </div>
-            <div class="mb-3">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" v-model="apellido">
-            </div>
-            <div class="mb-3">
-                <label for="fecha_nac">Fecha de nacimiento</label>
-                <input type="date" name="fecha_nac" id="fecha_nac" v-model="fecha_nac">
-            </div>
-            <div class="mb-3">
-                <label for="domicilio">Calle</label>
-                <input type="text" name="domicilio" id="domicilio" v-model="domicilio">
-            </div>
-            <div class="mb-3">
-                <label for="numero">Nro</label>
-                <input type="number" name="numero" id="numero" v-model="numero">
-            </div>
-            <div class="mb-3">
-                <label for="localidad">Localidad</label>
-                <input type="text" name="localidad" id="localidad" v-model="localidad">
-            </div>
-            <div class="mb-3">
-                <label for="telefono">Teléfono</label>
-                <input type="text" name="telefono" id="telefono" v-model="telefono">
-            </div>
-            <div class="mb-3">
-                <label for="horas">Cantidad de horas</label>
-                <input type="number" name="horas" id="horas" v-model="horas">
-            </div>
-            <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+            <form>
+                <h2>Editar Alumno</h2>
+                <div class="mb-3">
+                    <label for="id">Id</label>
+                    <input type="number" name="id" id="id" disabled v-model="id">
+                </div>
+                <div class="mb-3">
+                    <label for="dni">DNI</label>
+                    <input type="number" name="dni" id="dni" v-model="dni">
+                </div>
+                <div class="mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" v-model="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" v-model="apellido">
+                </div>
+                <div class="mb-3">
+                    <label for="fecha_nac">Fecha de nacimiento</label>
+                    <input type="date" name="fecha_nac" id="fecha_nac" v-model="fecha_nac">
+                </div>
+                <div class="mb-3">
+                    <label for="domicilio">Calle</label>
+                    <input type="text" name="domicilio" id="domicilio" v-model="domicilio">
+                </div>
+                <div class="mb-3">
+                    <label for="numero">Nro</label>
+                    <input type="number" name="numero" id="numero" v-model="numero">
+                </div>
+                <div class="mb-3">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" name="localidad" id="localidad" v-model="localidad">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono" v-model="telefono">
+                </div>
+                <div class="mb-3">
+                    <label for="horas">Cantidad de horas</label>
+                    <input type="number" name="horas" id="horas" v-model="horas">
+                </div>
+                <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+            </form>
         </div>
     </div>
     </main>
     <footer>
     </footer>
-    <script src="js/alumno_editar.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"> </script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/alumno_editar.js"></script>
 </body>
 </html>
