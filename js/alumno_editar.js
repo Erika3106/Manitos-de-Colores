@@ -15,7 +15,7 @@ numero:0,
 localidad:"",
 telefono:"",
 horas:0,
-url:'http://nicolasventu.pythonanywhere.com/alumnos/'+id,
+url:'//nicolasventu.pythonanywhere.com/alumnos'+id,
 }
 },
 methods: {
